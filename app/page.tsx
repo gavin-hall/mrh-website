@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import { Mail } from "lucide-react"
+// import { Button } from "@/components/ui/button"
+// import { Mail } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { Testimonials } from "@/components/testimonials"
 import { PressLogos } from "@/components/press-logos"

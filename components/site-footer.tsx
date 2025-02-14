@@ -3,7 +3,26 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Award, Globe } from "lucide-react"
 
-const footerLinks = {
+interface FooterLink {
+  text: string;
+  href: string;
+  isNew?: boolean;
+}
+
+interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
+
+interface FooterLinks {
+  buy: FooterSection;
+  updates: FooterSection;
+  giftCards: FooterSection;
+  aboutUs: FooterSection;
+  help: FooterSection;
+}
+
+const footerLinks: FooterLinks = {
   buy: {
     title: "Buy",
     links: [
@@ -93,11 +112,11 @@ export function SiteFooter() {
             <p className="text-gray-400">The dream starts here</p>
           </div>
 
-          {Object.values(footerLinks).map((column) => (
-            <div key={column.title} className="space-y-4">
+          {Object.values(footerLinks).map((column: FooterSection) => (
+            <div key={column.title}>
               <h3 className="font-medium text-white">{column.title}</h3>
               <ul className="space-y-3">
-                {column.links.map((link) => (
+                {column.links.map((link: FooterLink) => (
                   <li key={link.text}>
                     <Link href={link.href} className="text-gray-400 transition-colors hover:text-white">
                       {link.text}

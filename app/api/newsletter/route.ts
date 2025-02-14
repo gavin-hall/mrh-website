@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function POST(request: Request) {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { email } = await request.json()
 
     // Add your newsletter signup logic here
@@ -9,8 +10,11 @@ export async function POST(request: Request) {
     // await subscribeToNewsletter(email)
 
     return NextResponse.json({ success: true })
-  } catch (error) {
-    return NextResponse.json({ error: "Failed to subscribe" }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { error: 'Failed to subscribe to newsletter' },
+      { status: 500 }
+    )
   }
 }
 

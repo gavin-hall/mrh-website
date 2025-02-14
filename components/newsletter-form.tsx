@@ -25,7 +25,7 @@ export function NewsletterForm() {
 
       setStatus("success")
       setEmail("")
-    } catch (error) {
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
       setStatus("error")
     }
   }
