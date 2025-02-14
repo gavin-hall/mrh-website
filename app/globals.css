@@ -11,3 +11,11 @@ body {
     --radius: 0.5rem;
   }
 }
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('/BarlowSemiCondensed-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
