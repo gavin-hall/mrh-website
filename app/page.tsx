@@ -1,7 +1,11 @@
 import Image from "next/image";
 // import { Button } from "@/components/ui/button"
 // import { Mail } from "lucide-react"
+
 import { Logo } from "@/components/logo"
+import { SiteHeader } from "@/components/site-header"
+import { Hero } from "@/components/hero"
+
 import { Testimonials } from "@/components/testimonials"
 import { PressLogos } from "@/components/press-logos"
 import { NewsletterForm } from "@/components/newsletter-form"
@@ -20,6 +24,8 @@ export default function Home() {
 
           <h1 className="font-barlow text-4xl uppercase">Your Text Here</h1>
         </div>
+        <SiteHeader />
+        <Hero />
         <Testimonials />
         <PressLogos />
         <NewsletterForm />  
